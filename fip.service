@@ -1,0 +1,12 @@
+[Unit]
+Description=FIP en direct
+
+[Service]
+Type=simple
+User=gh
+Restart=always
+RestartSec=10
+ExecStart=/usr/bin/python3 /home/gh/fip/fipradio.py
+
+[Install]
+WantedBy=multi-user.target
